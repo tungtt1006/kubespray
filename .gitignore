@@ -26,7 +26,11 @@ plugins/mitogen
 inventory/*
 !inventory/local
 !inventory/sample
+!inventory/mycluster
 inventory/*/artifacts/
+
+# Aws key
+aws_keys/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
