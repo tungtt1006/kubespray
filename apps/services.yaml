@@ -28,8 +28,11 @@ spec:
               containerPort: 3000
           resources:
             requests:
-              cpu: 0.125
-              memory: 50Mi
+              cpu: "0.125"
+              memory: "50Mi"
+            limits:
+              cpu: "0.125"
+              memory: "50Mi"
 ---
 apiVersion: v1
 kind: Service
@@ -57,7 +60,8 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - http:
+    - host: test1.example.com
+      http:
         paths:
           - path: /
             pathType: Prefix
